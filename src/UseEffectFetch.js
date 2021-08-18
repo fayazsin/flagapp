@@ -7,7 +7,7 @@ function UseEffectFetch() {
             then((res) => res.json()).then((data) => SetUlkeler(data));
 
     }, [])
-    //console.log(ulkeler)
+    // console.log(ulkeler)
     return (
         <div className="text-center mt-5">
             <h1 className="bg-warning"> COUNTRY INFORMATION</h1>
@@ -15,13 +15,14 @@ function UseEffectFetch() {
             {
 
                 ulkeler.map((ulke) => {
-                    const { id, name, capital, flag } = ulke
+                    const { population, name, capital, flag } = ulke
                     return (
                         <div key={name}>
                             <img src={flag} alt="" width="50%" />
                             <div className="" >
-                                <h4>{name}</h4>
-                                <h4>{capital}</h4>
+                                <h4>Name :{name}</h4>
+                                <h4>Capital :{capital}</h4>
+                                <h4>Population :{population}</h4>
                             </div>
                         </div>
                     )
